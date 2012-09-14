@@ -1,0 +1,73 @@
+		SDL Tunneler v.1.1.1
+		====================
+
+SDL Tunneler was made by Taneli Kalvas <tvkalvas@cc.jyu.fi>
+All source code copyright (c) 2004 Taneli Kalvas,
+
+--
+
+SDL Tunneler is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version.
+
+SDL Tunneler is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with SDL Tunneler; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+
+--
+
+SDL Tunneler is a clone of legendary DOS-game called tunneler! The
+original tunneler was made by Geoffrey Silverton in 1991. In the game
+two players using the same keyboard and the same screen each control an
+underground tank. Goal is to find and destroy the opponent's tank. Since
+only small part of the map is displayed on the split screen, you might
+actually have some searching to do.
+
+The SDL tunneler was made by Taneli Kalvas in 2003. I ported this game
+because I think it is great fun and wanted a native linux version of this
+game (The real reason is that I was bored and I wanted to test the SDL
+library).
+
+
+Tech
+----
+
+Original tunneler was designed to run on a 6 MHz PC with some kind of color
+graphics adapter. The original game ran in 80x50 text mode using 16 colors
+of the text mode and a specially designed font to achieve a 160x100
+"graphics" mode.
+
+The new SDL tunneler uses stardard graphics modes provided by SDL library.
+The game only uses ANSI C and SDL functions so you should be able to compile
+the game for any platform supported by SDL. I have compiled tunneler for
+linux and win32.
+
+
+Installation and configuring
+----------------------------
+
+The compilation uses GNU autotools. To configure for compilation, do
+'./configure' with the necessary parameters to indicate installation
+location. Then do 'make' to compile and 'make install' to install the
+binary. The game should compile in windows if the configure script
+defines a 'WIN32=1' tag, if not then I hope someone can fix the
+configure script to do so. I will not touch windows computers!
+
+When you start the game for first time it will run in a window with 800x600
+resolution. You can change the video mode in settings menu or you can use
+command linux parameters -w, -h and --fullscreen. You can also change the
+keyboard bindings in the settings menu. The game saves the parameters to
+~/.tunnelerrc in linux and to tunneler.ini in windows.
+
+
+Happy Tunneling!
+
+
+-- Taneli Kalvas <tvkalvas@cc.jyu.fi>, June 5th 2008
+
